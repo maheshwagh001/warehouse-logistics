@@ -7,7 +7,7 @@
 # ./mvnw clean package -DskipTests
 
 # Then, build the image with:
-#
+# docker build -t my-quarkus-app .
 # docker build -f src/main/docker/Dockerfile.jvm -t quarkus/warehouse-logistics-jvm .
 #
 # Then run the container using:
@@ -88,7 +88,7 @@ ENV LANGUAGE='en_US:en'
 COPY --chown=185 target/quarkus-app/lib/ /deployments/lib/
 COPY --chown=185 target/quarkus-app/*.jar /deployments/
 COPY --chown=185 target/quarkus-app/app/ /deployments/app/
-#COPY --chown=185 target/quarkus-app/quarkus/ /deployments/quarkus/
+COPY --chown=185 target/quarkus-app/quarkus/ /deployments/quarkus/
 
 EXPOSE 8080
 USER 185

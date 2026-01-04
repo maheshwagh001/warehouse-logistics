@@ -3,8 +3,9 @@
 #
 # Before building the container image run:
 #
-# ./mvnw package
-#
+# ./mvnw clean package
+# ./mvnw clean package -DskipTests
+
 # Then, build the image with:
 #
 # docker build -f src/main/docker/Dockerfile.jvm -t quarkus/warehouse-logistics-jvm .

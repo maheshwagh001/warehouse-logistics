@@ -3,9 +3,8 @@
 #
 # Before building the container image run:
 
-# RUN ./mvnw package
-# ./mvnw clean package
-# ./mvnw clean package -DskipTests
+#
+# ./mvnw quarkus:dev
 
 # Then, build the image with:
 # docker build -t my-quarkus-app .
